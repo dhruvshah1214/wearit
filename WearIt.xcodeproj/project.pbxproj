@@ -10,6 +10,8 @@
 		5967D66B0F1450F39DBCE4C2 /* Pods_WearItTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7227044B55B6BE7241E71E /* Pods_WearItTests.framework */; };
 		664BF45C3F73A757F6F9FB0B /* Pods_WearItUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1370473A7AB9CD01F938162F /* Pods_WearItUITests.framework */; };
 		8CFB18D3EA9E15B5642A1751 /* Pods_WearIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 928B0199F68A4B97CFF25C60 /* Pods_WearIt.framework */; };
+		9309845D1EA2B907002A470B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9309845C1EA2B907002A470B /* GoogleService-Info.plist */; };
+		9309845F1EA2B93F002A470B /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9309845E1EA2B93F002A470B /* TestViewController.swift */; };
 		936DCCCA1EA2AC1B005A0FD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936DCCC91EA2AC1B005A0FD3 /* AppDelegate.swift */; };
 		936DCCCF1EA2AC1B005A0FD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 936DCCCD1EA2AC1B005A0FD3 /* Main.storyboard */; };
 		936DCCD21EA2AC1B005A0FD3 /* WearIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 936DCCD01EA2AC1B005A0FD3 /* WearIt.xcdatamodeld */; };
@@ -42,6 +44,8 @@
 		6E7227044B55B6BE7241E71E /* Pods_WearItTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WearItTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7039BF3B1E46F6646413EBD7 /* Pods-WearItUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WearItUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WearItUITests/Pods-WearItUITests.release.xcconfig"; sourceTree = "<group>"; };
 		928B0199F68A4B97CFF25C60 /* Pods_WearIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WearIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9309845C1EA2B907002A470B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9309845E1EA2B93F002A470B /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		936DCCC61EA2AC1B005A0FD3 /* WearIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WearIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		936DCCC91EA2AC1B005A0FD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		936DCCCE1EA2AC1B005A0FD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -129,7 +133,9 @@
 				936DCCD31EA2AC1B005A0FD3 /* Assets.xcassets */,
 				936DCCD51EA2AC1B005A0FD3 /* LaunchScreen.storyboard */,
 				936DCCD81EA2AC1B005A0FD3 /* Info.plist */,
+				9309845C1EA2B907002A470B /* GoogleService-Info.plist */,
 				936DCCD01EA2AC1B005A0FD3 /* WearIt.xcdatamodeld */,
+				9309845E1EA2B93F002A470B /* TestViewController.swift */,
 			);
 			path = WearIt;
 			sourceTree = "<group>";
@@ -282,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				936DCCD71EA2AC1B005A0FD3 /* LaunchScreen.storyboard in Resources */,
+				9309845D1EA2B907002A470B /* GoogleService-Info.plist in Resources */,
 				936DCCD41EA2AC1B005A0FD3 /* Assets.xcassets in Resources */,
 				936DCCCF1EA2AC1B005A0FD3 /* Main.storyboard in Resources */,
 			);
@@ -447,6 +454,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				936DCCCA1EA2AC1B005A0FD3 /* AppDelegate.swift in Sources */,
+				9309845F1EA2B93F002A470B /* TestViewController.swift in Sources */,
 				936DCCD21EA2AC1B005A0FD3 /* WearIt.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -698,6 +706,7 @@
 				936DCCF31EA2AC1C005A0FD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		936DCCF41EA2AC1C005A0FD3 /* Build configuration list for PBXNativeTarget "WearItTests" */ = {
 			isa = XCConfigurationList;
@@ -706,6 +715,7 @@
 				936DCCF61EA2AC1C005A0FD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		936DCCF71EA2AC1C005A0FD3 /* Build configuration list for PBXNativeTarget "WearItUITests" */ = {
 			isa = XCConfigurationList;
@@ -714,6 +724,7 @@
 				936DCCF91EA2AC1C005A0FD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
