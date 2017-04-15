@@ -1,0 +1,6 @@
+framework module Pods_WearItUITests {
+  umbrella header "Pods-WearItUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
