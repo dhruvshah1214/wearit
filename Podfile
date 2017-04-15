@@ -7,7 +7,8 @@ target 'WearIt' do
 
   # Pods for WearIt
   pod 'Firebase/Core'
-  pod ‘FirebaseUI/Auth’, ‘~> 3.0’  
+  pod ‘FirebaseUI/Auth’, ‘~> 3.0’
+  pod 'Firebase/Auth'
 
   target 'WearItTests' do
     inherit! :search_paths

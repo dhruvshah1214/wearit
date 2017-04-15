@@ -11,7 +11,6 @@
 		664BF45C3F73A757F6F9FB0B /* Pods_WearItUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1370473A7AB9CD01F938162F /* Pods_WearItUITests.framework */; };
 		8CFB18D3EA9E15B5642A1751 /* Pods_WearIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 928B0199F68A4B97CFF25C60 /* Pods_WearIt.framework */; };
 		9309845D1EA2B907002A470B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9309845C1EA2B907002A470B /* GoogleService-Info.plist */; };
-		9309845F1EA2B93F002A470B /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9309845E1EA2B93F002A470B /* TestViewController.swift */; };
 		936DCCCA1EA2AC1B005A0FD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936DCCC91EA2AC1B005A0FD3 /* AppDelegate.swift */; };
 		936DCCCF1EA2AC1B005A0FD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 936DCCCD1EA2AC1B005A0FD3 /* Main.storyboard */; };
 		936DCCD21EA2AC1B005A0FD3 /* WearIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 936DCCD01EA2AC1B005A0FD3 /* WearIt.xcdatamodeld */; };
@@ -19,6 +18,7 @@
 		936DCCD71EA2AC1B005A0FD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 936DCCD51EA2AC1B005A0FD3 /* LaunchScreen.storyboard */; };
 		936DCCE21EA2AC1B005A0FD3 /* WearItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936DCCE11EA2AC1B005A0FD3 /* WearItTests.swift */; };
 		936DCCED1EA2AC1C005A0FD3 /* WearItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936DCCEC1EA2AC1C005A0FD3 /* WearItUITests.swift */; };
+		936DCCFB1EA2C07A005A0FD3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936DCCFA1EA2C07A005A0FD3 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,6 @@
 		7039BF3B1E46F6646413EBD7 /* Pods-WearItUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WearItUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WearItUITests/Pods-WearItUITests.release.xcconfig"; sourceTree = "<group>"; };
 		928B0199F68A4B97CFF25C60 /* Pods_WearIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WearIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9309845C1EA2B907002A470B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		9309845E1EA2B93F002A470B /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		936DCCC61EA2AC1B005A0FD3 /* WearIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WearIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		936DCCC91EA2AC1B005A0FD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		936DCCCE1EA2AC1B005A0FD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,6 +58,7 @@
 		936DCCE81EA2AC1C005A0FD3 /* WearItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WearItUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		936DCCEC1EA2AC1C005A0FD3 /* WearItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WearItUITests.swift; sourceTree = "<group>"; };
 		936DCCEE1EA2AC1C005A0FD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		936DCCFA1EA2C07A005A0FD3 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9A90511624A40A24BB1F3D14 /* Pods-WearIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WearIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-WearIt/Pods-WearIt.release.xcconfig"; sourceTree = "<group>"; };
 		D511887DFE8163F0F249CB6E /* Pods-WearItTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WearItTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WearItTests/Pods-WearItTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D816964A882F5969C0D04821 /* Pods-WearIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WearIt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WearIt/Pods-WearIt.debug.xcconfig"; sourceTree = "<group>"; };
@@ -135,7 +135,7 @@
 				936DCCD81EA2AC1B005A0FD3 /* Info.plist */,
 				9309845C1EA2B907002A470B /* GoogleService-Info.plist */,
 				936DCCD01EA2AC1B005A0FD3 /* WearIt.xcdatamodeld */,
-				9309845E1EA2B93F002A470B /* TestViewController.swift */,
+				936DCCFA1EA2C07A005A0FD3 /* LoginViewController.swift */,
 			);
 			path = WearIt;
 			sourceTree = "<group>";
@@ -453,8 +453,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				936DCCFB1EA2C07A005A0FD3 /* LoginViewController.swift in Sources */,
 				936DCCCA1EA2AC1B005A0FD3 /* AppDelegate.swift in Sources */,
-				9309845F1EA2B93F002A470B /* TestViewController.swift in Sources */,
 				936DCCD21EA2AC1B005A0FD3 /* WearIt.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
