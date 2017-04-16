@@ -12,7 +12,9 @@ target 'WearIt' do
   pod 'Firebase/Storage'
   pod 'Firebase/Database'
   pod 'TWPhotoPicker', '~> 1.0.0'
-  
+  pod 'UIView+draggable'
+  pod 'KLCPopup'
+
   target 'WearItTests' do
     inherit! :search_paths
     # Pods for testing

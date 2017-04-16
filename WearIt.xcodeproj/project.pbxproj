@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5967D66B0F1450F39DBCE4C2 /* Pods_WearItTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7227044B55B6BE7241E71E /* Pods_WearItTests.framework */; };
 		664BF45C3F73A757F6F9FB0B /* Pods_WearItUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1370473A7AB9CD01F938162F /* Pods_WearItUITests.framework */; };
+		6799C3C61EA37A9B009D1379 /* ExtractShirtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6799C3C51EA37A9B009D1379 /* ExtractShirtViewController.swift */; };
+		6799C3C81EA37B2F009D1379 /* TryItOnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6799C3C71EA37B2F009D1379 /* TryItOnViewController.swift */; };
 		8CFB18D3EA9E15B5642A1751 /* Pods_WearIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 928B0199F68A4B97CFF25C60 /* Pods_WearIt.framework */; };
 		9309845D1EA2B907002A470B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9309845C1EA2B907002A470B /* GoogleService-Info.plist */; };
 		93600D0B1EA33D1800CED557 /* SavedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93600D0A1EA33D1800CED557 /* SavedTableViewController.swift */; };
@@ -47,6 +49,8 @@
 /* Begin PBXFileReference section */
 		1370473A7AB9CD01F938162F /* Pods_WearItUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WearItUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E95364D6E53C42A83AC7400 /* Pods-WearItTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WearItTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WearItTests/Pods-WearItTests.release.xcconfig"; sourceTree = "<group>"; };
+		6799C3C51EA37A9B009D1379 /* ExtractShirtViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtractShirtViewController.swift; sourceTree = "<group>"; };
+		6799C3C71EA37B2F009D1379 /* TryItOnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TryItOnViewController.swift; sourceTree = "<group>"; };
 		6E7227044B55B6BE7241E71E /* Pods_WearItTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WearItTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7039BF3B1E46F6646413EBD7 /* Pods-WearItUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WearItUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WearItUITests/Pods-WearItUITests.release.xcconfig"; sourceTree = "<group>"; };
 		928B0199F68A4B97CFF25C60 /* Pods_WearIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WearIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,15 +149,17 @@
 				936DCCD31EA2AC1B005A0FD3 /* Assets.xcassets */,
 				936DCCD51EA2AC1B005A0FD3 /* LaunchScreen.storyboard */,
 				936DCCD81EA2AC1B005A0FD3 /* Info.plist */,
-				9309845C1EA2B907002A470B /* GoogleService-Info.plist */,
 				936DCCD01EA2AC1B005A0FD3 /* WearIt.xcdatamodeld */,
 				936DCCFA1EA2C07A005A0FD3 /* LoginViewController.swift */,
+				9309845C1EA2B907002A470B /* GoogleService-Info.plist */,
 				936DCCFC1EA2D29A005A0FD3 /* SignUpViewController.swift */,
 				936DCD001EA2DF81005A0FD3 /* FeedTableViewController.swift */,
 				936DCD661EA323FB005A0FD3 /* Post.swift */,
 				936DCD681EA32563005A0FD3 /* PostTableViewCell.swift */,
 				93600D0A1EA33D1800CED557 /* SavedTableViewController.swift */,
 				93600D0C1EA3436C00CED557 /* ShareViewController.swift */,
+				6799C3C51EA37A9B009D1379 /* ExtractShirtViewController.swift */,
+				6799C3C71EA37B2F009D1379 /* TryItOnViewController.swift */,
 			);
 			path = WearIt;
 			sourceTree = "<group>";
@@ -387,7 +393,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		8FA6D3E4DC61E3A2FD6A8AA6 /* [CP] Embed Pods Frameworks */ = {
@@ -432,7 +438,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		DA197904CC3A9B6024C1A4CA /* [CP] Check Pods Manifest.lock */ = {
@@ -447,7 +453,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		FC1C267554499FFF1D45D01D /* [CP] Copy Pods Resources */ = {
@@ -478,6 +484,8 @@
 				93600D0B1EA33D1800CED557 /* SavedTableViewController.swift in Sources */,
 				936DCCCA1EA2AC1B005A0FD3 /* AppDelegate.swift in Sources */,
 				936DCD671EA323FB005A0FD3 /* Post.swift in Sources */,
+				6799C3C61EA37A9B009D1379 /* ExtractShirtViewController.swift in Sources */,
+				6799C3C81EA37B2F009D1379 /* TryItOnViewController.swift in Sources */,
 				93600D0D1EA3436C00CED557 /* ShareViewController.swift in Sources */,
 				936DCCFD1EA2D29A005A0FD3 /* SignUpViewController.swift in Sources */,
 				936DCCD21EA2AC1B005A0FD3 /* WearIt.xcdatamodeld in Sources */,
