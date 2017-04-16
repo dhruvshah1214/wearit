@@ -11,7 +11,7 @@ import UIKit
 class SavedTableViewController: UITableViewController {
 
     
-    
+    var savedItems = [Save]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,23 +31,25 @@ class SavedTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return savedItems.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "saveCell", for: indexPath)
 
-        // Configure the cell...
+        if let saveCell = cell as? SaveTableViewCell{
+            saveCell.save = savedItems[indexPath.row]
+        }
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
