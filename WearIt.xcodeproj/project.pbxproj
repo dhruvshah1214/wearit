@@ -14,6 +14,7 @@
 		8CFB18D3EA9E15B5642A1751 /* Pods_WearIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 928B0199F68A4B97CFF25C60 /* Pods_WearIt.framework */; };
 		9309845D1EA2B907002A470B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9309845C1EA2B907002A470B /* GoogleService-Info.plist */; };
 		93600D0B1EA33D1800CED557 /* SavedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93600D0A1EA33D1800CED557 /* SavedTableViewController.swift */; };
+		93600D0D1EA3436C00CED557 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93600D0C1EA3436C00CED557 /* ShareViewController.swift */; };
 		936DCCCA1EA2AC1B005A0FD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936DCCC91EA2AC1B005A0FD3 /* AppDelegate.swift */; };
 		936DCCCF1EA2AC1B005A0FD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 936DCCCD1EA2AC1B005A0FD3 /* Main.storyboard */; };
 		936DCCD21EA2AC1B005A0FD3 /* WearIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 936DCCD01EA2AC1B005A0FD3 /* WearIt.xcdatamodeld */; };
@@ -26,10 +27,6 @@
 		936DCD011EA2DF81005A0FD3 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936DCD001EA2DF81005A0FD3 /* FeedTableViewController.swift */; };
 		936DCD671EA323FB005A0FD3 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936DCD661EA323FB005A0FD3 /* Post.swift */; };
 		936DCD691EA32563005A0FD3 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936DCD681EA32563005A0FD3 /* PostTableViewCell.swift */; };
-		936DCD6B1EA378D5005A0FD3 /* Save.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936DCD6A1EA378D5005A0FD3 /* Save.swift */; };
-		936DCD6D1EA37B9A005A0FD3 /* SaveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936DCD6C1EA37B9A005A0FD3 /* SaveTableViewCell.swift */; };
-		936DCD6F1EA39217005A0FD3 /* ObjectData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 936DCD6E1EA39217005A0FD3 /* ObjectData.plist */; };
-		936DCD711EA39BD5005A0FD3 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936DCD701EA39BD5005A0FD3 /* PostViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +56,7 @@
 		928B0199F68A4B97CFF25C60 /* Pods_WearIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WearIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9309845C1EA2B907002A470B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		93600D0A1EA33D1800CED557 /* SavedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedTableViewController.swift; sourceTree = "<group>"; };
+		93600D0C1EA3436C00CED557 /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		936DCCC61EA2AC1B005A0FD3 /* WearIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WearIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		936DCCC91EA2AC1B005A0FD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		936DCCCE1EA2AC1B005A0FD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -77,10 +75,6 @@
 		936DCD001EA2DF81005A0FD3 /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
 		936DCD661EA323FB005A0FD3 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		936DCD681EA32563005A0FD3 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
-		936DCD6A1EA378D5005A0FD3 /* Save.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Save.swift; sourceTree = "<group>"; };
-		936DCD6C1EA37B9A005A0FD3 /* SaveTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveTableViewCell.swift; sourceTree = "<group>"; };
-		936DCD6E1EA39217005A0FD3 /* ObjectData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ObjectData.plist; sourceTree = "<group>"; };
-		936DCD701EA39BD5005A0FD3 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		9A90511624A40A24BB1F3D14 /* Pods-WearIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WearIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-WearIt/Pods-WearIt.release.xcconfig"; sourceTree = "<group>"; };
 		D511887DFE8163F0F249CB6E /* Pods-WearItTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WearItTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WearItTests/Pods-WearItTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D816964A882F5969C0D04821 /* Pods-WearIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WearIt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WearIt/Pods-WearIt.debug.xcconfig"; sourceTree = "<group>"; };
@@ -320,7 +314,6 @@
 			files = (
 				936DCCD71EA2AC1B005A0FD3 /* LaunchScreen.storyboard in Resources */,
 				9309845D1EA2B907002A470B /* GoogleService-Info.plist in Resources */,
-				936DCD6F1EA39217005A0FD3 /* ObjectData.plist in Resources */,
 				936DCCD41EA2AC1B005A0FD3 /* Assets.xcassets in Resources */,
 				936DCCCF1EA2AC1B005A0FD3 /* Main.storyboard in Resources */,
 			);
@@ -487,10 +480,8 @@
 			files = (
 				936DCD691EA32563005A0FD3 /* PostTableViewCell.swift in Sources */,
 				936DCD011EA2DF81005A0FD3 /* FeedTableViewController.swift in Sources */,
-				936DCD6B1EA378D5005A0FD3 /* Save.swift in Sources */,
 				936DCCFB1EA2C07A005A0FD3 /* LoginViewController.swift in Sources */,
 				93600D0B1EA33D1800CED557 /* SavedTableViewController.swift in Sources */,
-				936DCD6D1EA37B9A005A0FD3 /* SaveTableViewCell.swift in Sources */,
 				936DCCCA1EA2AC1B005A0FD3 /* AppDelegate.swift in Sources */,
 				936DCD671EA323FB005A0FD3 /* Post.swift in Sources */,
 				6799C3C61EA37A9B009D1379 /* ExtractShirtViewController.swift in Sources */,
@@ -498,7 +489,6 @@
 				93600D0D1EA3436C00CED557 /* ShareViewController.swift in Sources */,
 				936DCCFD1EA2D29A005A0FD3 /* SignUpViewController.swift in Sources */,
 				936DCCD21EA2AC1B005A0FD3 /* WearIt.xcdatamodeld in Sources */,
-				936DCD711EA39BD5005A0FD3 /* PostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
