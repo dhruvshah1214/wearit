@@ -1,5 +1,5 @@
 //
-//  FeedTableViewController.swift
+//  SavedTableViewController.swift
 //  WearIt
 //
 //  Created by TinoHacks on 4/15/17.
@@ -7,18 +7,14 @@
 //
 
 import UIKit
-import FirebaseDatabase
-import Firebase
-import FirebaseStorage
 
-class FeedTableViewController: UITableViewController {
+class SavedTableViewController: UITableViewController {
+
     
-    var posts: [Post] = [Post]()
-    var ref = FIRDatabase.database().reference()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.allowsSelection = false
-        posts.append(Post(_image: #imageLiteral(resourceName: "shirt"), _user: "Bob", _numOfLikes: 1, _articlesOfClothing: [], _description: "A nice shirt", _profileImage: #imageLiteral(resourceName: "redHeart")))
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -34,23 +30,25 @@ class FeedTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        // #warning Incomplete implementation, return the number of sections
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
+        // #warning Incomplete implementation, return the number of rows
+        return 0
     }
 
-    
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath)
-        if let postCell = cell as? PostTableViewCell{
-            postCell.post = posts[indexPath.row]
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+
+        // Configure the cell...
 
         return cell
     }
-    
+    */
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

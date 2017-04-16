@@ -11,6 +11,7 @@
 		664BF45C3F73A757F6F9FB0B /* Pods_WearItUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1370473A7AB9CD01F938162F /* Pods_WearItUITests.framework */; };
 		8CFB18D3EA9E15B5642A1751 /* Pods_WearIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 928B0199F68A4B97CFF25C60 /* Pods_WearIt.framework */; };
 		9309845D1EA2B907002A470B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9309845C1EA2B907002A470B /* GoogleService-Info.plist */; };
+		93600D0B1EA33D1800CED557 /* SavedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93600D0A1EA33D1800CED557 /* SavedTableViewController.swift */; };
 		936DCCCA1EA2AC1B005A0FD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936DCCC91EA2AC1B005A0FD3 /* AppDelegate.swift */; };
 		936DCCCF1EA2AC1B005A0FD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 936DCCCD1EA2AC1B005A0FD3 /* Main.storyboard */; };
 		936DCCD21EA2AC1B005A0FD3 /* WearIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 936DCCD01EA2AC1B005A0FD3 /* WearIt.xcdatamodeld */; };
@@ -49,6 +50,7 @@
 		7039BF3B1E46F6646413EBD7 /* Pods-WearItUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WearItUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WearItUITests/Pods-WearItUITests.release.xcconfig"; sourceTree = "<group>"; };
 		928B0199F68A4B97CFF25C60 /* Pods_WearIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WearIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9309845C1EA2B907002A470B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		93600D0A1EA33D1800CED557 /* SavedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedTableViewController.swift; sourceTree = "<group>"; };
 		936DCCC61EA2AC1B005A0FD3 /* WearIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WearIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		936DCCC91EA2AC1B005A0FD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		936DCCCE1EA2AC1B005A0FD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				936DCD001EA2DF81005A0FD3 /* FeedTableViewController.swift */,
 				936DCD661EA323FB005A0FD3 /* Post.swift */,
 				936DCD681EA32563005A0FD3 /* PostTableViewCell.swift */,
+				93600D0A1EA33D1800CED557 /* SavedTableViewController.swift */,
 			);
 			path = WearIt;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				936DCD691EA32563005A0FD3 /* PostTableViewCell.swift in Sources */,
 				936DCD011EA2DF81005A0FD3 /* FeedTableViewController.swift in Sources */,
 				936DCCFB1EA2C07A005A0FD3 /* LoginViewController.swift in Sources */,
+				93600D0B1EA33D1800CED557 /* SavedTableViewController.swift in Sources */,
 				936DCCCA1EA2AC1B005A0FD3 /* AppDelegate.swift in Sources */,
 				936DCD671EA323FB005A0FD3 /* Post.swift in Sources */,
 				936DCCFD1EA2D29A005A0FD3 /* SignUpViewController.swift in Sources */,
