@@ -8,8 +8,9 @@
 
 import UIKit
 import Firebase
+import QuartzCore
 
-class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
     
     
@@ -24,12 +25,22 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var passwordTextField: UITextField!
     
     let picker = UIImagePickerController()
+    @IBOutlet weak var signUpButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         picker.delegate = self
         errorMessageLabel.isHidden = true
         ref = FIRDatabase.database().reference()
+        signUpButton.layer.cornerRadius = 7
+        profileImageView.layer.masksToBounds = false
+        profileImageView.layer.cornerRadius = profileImageView.frame.height/2
+        profileImageView.clipsToBounds = true
+        nameTextField.delegate = self
+        usernameTextField.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        passwordTextField.isSecureTextEntry = true
     }
     
     override func viewDidLayoutSubviews() {
@@ -102,6 +113,11 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
             profileImageView.image = image
         }
         dismiss(animated: true, completion: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     /*

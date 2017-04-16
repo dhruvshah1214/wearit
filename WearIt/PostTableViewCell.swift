@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
+import QuartzCore
 
 class PostTableViewCell: UITableViewCell {
     
@@ -18,7 +19,7 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var contentImage: UIImageView!
     @IBOutlet weak var numberOfLikesLabel: UILabel!
     
-    var articlesOfClothing = [URL]()
+    var articlesOfClothing = [URL?]()
     
     @IBOutlet weak var heart: UIButton!
     
@@ -38,6 +39,10 @@ class PostTableViewCell: UITableViewCell {
             numberOfLikesLabel.text = String(_post.numOfLikes)
             articlesOfClothing = _post.articlesOfClothing
             descriptionLabel.text = post?.description
+            
+            profileImageView.layer.masksToBounds = false
+            profileImageView.layer.cornerRadius = profileImageView.frame.height/2
+            profileImageView.clipsToBounds = true
         }
     }
     

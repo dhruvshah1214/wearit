@@ -94,14 +94,15 @@ class FeedTableViewController: UITableViewController {
                                                 
                                                 pic = UIImage(data: data!)
                                                 let islandRefe = storageRef.child("Users/" + username! + "/profilePicture.png")
-                                                
+                                                print(isrString)
+
                                                 islandRefe.data(withMaxSize: 32 * 1024 * 1024) { data1, error2 in
                                                     if let er2 = error2 {
                                                         // Uh-oh, an error occurred!
                                                     } else {
                                                         
                                                         profile = UIImage(data: data1!)
-                                                        var post = Post(_image: pic!, _user: username!, _numOfLikes: likes!, _articlesOfClothing: [URL(string: clothe!)!], _description: description!, _profileImage: profile!, _postID: Int(String(res.key))!, _userID: rest.key, _hiddenImage: #imageLiteral(resourceName: "whiteHeart"))
+                                                        let post = Post(_image: pic!, _user: username!, _numOfLikes: likes!, _articlesOfClothing: [URL(string: clothe!)], _description: description!, _profileImage: profile!, _postID: Int(String(res.key))!, _userID: rest.key, _hiddenImage: #imageLiteral(resourceName: "whiteHeart"))
                                                         self.posts.append(post)
                                                         self.tableView.reloadData()
                                                     }

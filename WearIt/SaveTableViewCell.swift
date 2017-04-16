@@ -25,9 +25,9 @@ class SaveTableViewCell: UITableViewCell {
     @IBAction func Buy(_ sender: Any) {
         //UIApplication.shared.openURL((save?.URL[0])!)
         if let _save = save{
-            if UIApplication.shared.canOpenURL(_save.URL[0]){
-                print(URL.text)
-                UIApplication.shared.openURL(_save.URL[0])
+            if UIApplication.shared.canOpenURL(_save.URL[0]!){
+                print("URLBLAH: \(URL.text)")
+                UIApplication.shared.openURL(_save.URL[0]!)
             }
         }
     }
@@ -35,7 +35,8 @@ class SaveTableViewCell: UITableViewCell {
     private func update(){
         if let _save = save{
             Thumbnail.image = _save.thumbnail
-            URL.text = _save.URL[0].path
+            URL.text = _save.URL[0]?.path
+            print(_save.URL[0]?.path)
         }
     }
 
