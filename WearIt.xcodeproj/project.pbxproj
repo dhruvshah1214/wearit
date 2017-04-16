@@ -21,6 +21,8 @@
 		936DCCFB1EA2C07A005A0FD3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936DCCFA1EA2C07A005A0FD3 /* LoginViewController.swift */; };
 		936DCCFD1EA2D29A005A0FD3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936DCCFC1EA2D29A005A0FD3 /* SignUpViewController.swift */; };
 		936DCD011EA2DF81005A0FD3 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936DCD001EA2DF81005A0FD3 /* FeedTableViewController.swift */; };
+		936DCD671EA323FB005A0FD3 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936DCD661EA323FB005A0FD3 /* Post.swift */; };
+		936DCD691EA32563005A0FD3 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936DCD681EA32563005A0FD3 /* PostTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		936DCCFA1EA2C07A005A0FD3 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		936DCCFC1EA2D29A005A0FD3 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		936DCD001EA2DF81005A0FD3 /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
+		936DCD661EA323FB005A0FD3 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		936DCD681EA32563005A0FD3 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		9A90511624A40A24BB1F3D14 /* Pods-WearIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WearIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-WearIt/Pods-WearIt.release.xcconfig"; sourceTree = "<group>"; };
 		D511887DFE8163F0F249CB6E /* Pods-WearItTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WearItTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WearItTests/Pods-WearItTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D816964A882F5969C0D04821 /* Pods-WearIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WearIt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WearIt/Pods-WearIt.debug.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +146,8 @@
 				936DCCFA1EA2C07A005A0FD3 /* LoginViewController.swift */,
 				936DCCFC1EA2D29A005A0FD3 /* SignUpViewController.swift */,
 				936DCD001EA2DF81005A0FD3 /* FeedTableViewController.swift */,
+				936DCD661EA323FB005A0FD3 /* Post.swift */,
+				936DCD681EA32563005A0FD3 /* PostTableViewCell.swift */,
 			);
 			path = WearIt;
 			sourceTree = "<group>";
@@ -459,9 +465,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				936DCD691EA32563005A0FD3 /* PostTableViewCell.swift in Sources */,
 				936DCD011EA2DF81005A0FD3 /* FeedTableViewController.swift in Sources */,
 				936DCCFB1EA2C07A005A0FD3 /* LoginViewController.swift in Sources */,
 				936DCCCA1EA2AC1B005A0FD3 /* AppDelegate.swift in Sources */,
+				936DCD671EA323FB005A0FD3 /* Post.swift in Sources */,
 				936DCCFD1EA2D29A005A0FD3 /* SignUpViewController.swift in Sources */,
 				936DCCD21EA2AC1B005A0FD3 /* WearIt.xcdatamodeld in Sources */,
 			);

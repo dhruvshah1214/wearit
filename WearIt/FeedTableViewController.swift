@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseDatabase
 import Firebase
+import FirebaseStorage
 
 class FeedTableViewController: UITableViewController {
     
@@ -29,7 +30,7 @@ class FeedTableViewController: UITableViewController {
     }
 
     @IBAction func liked(_ sender: Any) {
-        self.ref.child("Posts").child("1").setValue(["Likes": username])
+
     }
     // MARK: - Table view data source
 
@@ -43,15 +44,16 @@ class FeedTableViewController: UITableViewController {
         return 0
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath)
+        if let postCell = cell as? PostTableViewCell{
+            
+        }
 
-        // Configure the cell...
-
-        return cell
+        return
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
