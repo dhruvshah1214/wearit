@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>TWPhotoPicker.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -53,6 +58,16 @@
 			<true/>
 		</dict>
 		<key>DF7C3482B2663B0D4617C38159E37A7E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F624BE600DCE6F1714C400CC098DD739</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FA25DF88E921B7FA3CB1FAE8700FEB30</key>
 		<dict>
 			<key>primary</key>
 			<true/>

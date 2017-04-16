@@ -9,12 +9,12 @@
 import UIKit
 import Firebase
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        errorMessageLabel.isHidden = true
-    }
+    
+    
+    var userStorage: FIRStorageReference! = FIRStorage.storage().reference()
+    var ref: FIRDatabaseReference!
     
     @IBOutlet weak var errorMessageLabel: UILabel!
     @IBOutlet weak var profileImageView: UIImageView!
@@ -23,26 +23,56 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    let picker = UIImagePickerController()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        picker.delegate = self
+        errorMessageLabel.isHidden = true
+        ref = FIRDatabase.database().reference()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        profileImageView.layer.cornerRadius = profileImageView.frame.size.height / 2
+    }
     
     @IBAction func signUpButonPressed(_ sender: UIButton) {
-        if let emailText = emailTextField.text{
-            if let passwordText = passwordTextField.text{
-                FIRAuth.auth()?.createUser(withEmail: emailText, password: passwordText) { (user, error) in
-                    if error != nil{
-                        self.errorMessageLabel.isHidden = false
-                        self.errorMessageLabel.numberOfLines = 0
-                        self.errorMessageLabel.text = error.debugDescription
-                        print(error.debugDescription)
-                    }else{
-                        self.updateUsersProfile {
-                            self.performSegue(withIdentifier: "segueToMain", sender: self)
+        guard nameTextField.text != nil, emailTextField.text != nil, usernameTextField.text != nil, passwordTextField.text != nil, profileImageView.image != nil else {return}
+        
+        FIRAuth.auth()?.createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
+            if let _user = user{
+                self.ref.child("Users/\(_user.uid)/ID").setValue(self.usernameTextField.text!)
+                
+                if let imgData: Data = UIImagePNGRepresentation(self.profileImageView.image!) {
+                    let finalRef = self.userStorage.child("Users").child(self.usernameTextField.text!).child("profilePicture.png")
+                    _ = finalRef.put(imgData, metadata: nil, completion: { (metadata, error) in
+                        if (error != nil) {
+                            print(error!)
                         }
-                    }
+                        else {
+                            print("SUCCESS")
+                        }
+                    })
+
+                }
+                
+            }
+            if error != nil{
+                self.errorMessageLabel.isHidden = false
+                self.errorMessageLabel.numberOfLines = 0
+                self.errorMessageLabel.text = error.debugDescription
+                print(error.debugDescription)
+            }else{
+                self.updateUsersProfile {
+                    self.performSegue(withIdentifier: "segueToMain", sender: self)
                 }
             }
         }
+
         
     }
+    
     
     private func updateUsersProfile(completion: @escaping () -> Void){
         let user = FIRAuth.auth()?.currentUser
@@ -61,6 +91,18 @@ class SignUpViewController: UIViewController {
         }
     }
     
+    @IBAction func changeProfileImage(_ sender: UIButton) {
+        picker.allowsEditing = true
+        picker.sourceType = .photoLibrary
+        present(picker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage{
+            profileImageView.image = image
+        }
+        dismiss(animated: true, completion: nil)
+    }
     
     /*
      // MARK: - Navigation

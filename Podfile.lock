@@ -41,6 +41,7 @@ PODS:
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.1)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.1)
   - GTMSessionFetcher/Core (1.1.9)
+  - TWPhotoPicker (1.0.0)
 
 DEPENDENCIES:
   - Firebase/Auth
@@ -48,6 +49,7 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Storage
   - FirebaseUI/Auth (~> 3.0)
+  - TWPhotoPicker (~> 1.0.0)
 
 SPEC CHECKSUMS:
   Firebase: 21bf4a89d3f01bfbe11adc3a5d934a4a3d3a5fd6
@@ -60,7 +62,8 @@ SPEC CHECKSUMS:
   FirebaseUI: 6e99ff95e369f5858232e4f65bff215458fe8469
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 5c046c76a1f859bc9c187e918f18e4fc7bb57b5e
+  TWPhotoPicker: 5e9bcd6097e8602e8243d1bdd54a5cf1afbedcf2
 
-PODFILE CHECKSUM: 2cd5eb35b4415318d14c5236e3cddd37de2252ab
+PODFILE CHECKSUM: d384789f8ec03dba8e5e6982b6b7d23edbb3866d
 
 COCOAPODS: 1.2.1
