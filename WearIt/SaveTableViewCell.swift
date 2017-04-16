@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class SaveTableViewCell: UITableViewCell {
 
    
@@ -22,8 +23,13 @@ class SaveTableViewCell: UITableViewCell {
     }
 
     @IBAction func Buy(_ sender: Any) {
-        
-        
+        //UIApplication.shared.openURL((save?.URL[0])!)
+        if let _save = save{
+            if UIApplication.shared.canOpenURL(_save.URL[0]){
+                print(URL.text)
+                UIApplication.shared.openURL(_save.URL[0])
+            }
+        }
     }
     
     private func update(){

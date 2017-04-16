@@ -101,7 +101,7 @@ class FeedTableViewController: UITableViewController {
                                                     } else {
                                                         
                                                         profile = UIImage(data: data1!)
-                                                        var post = Post(_image: pic!, _user: username!, _numOfLikes: likes!, _articlesOfClothing: [URL(string: clothe!)!], _description: description!, _profileImage: profile!, _postID: Int(String(res.key))!, _userID: rest.key)
+                                                        var post = Post(_image: pic!, _user: username!, _numOfLikes: likes!, _articlesOfClothing: [URL(string: clothe!)!], _description: description!, _profileImage: profile!, _postID: Int(String(res.key))!, _userID: rest.key, _hiddenImage: #imageLiteral(resourceName: "whiteHeart"))
                                                         self.posts.append(post)
                                                         self.tableView.reloadData()
                                                     }
@@ -162,14 +162,33 @@ class FeedTableViewController: UITableViewController {
      }
      */
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "saveFeed"{
+
+            let destinationNavigationController = segue.destination as! UINavigationController
+            let targetController = destinationNavigationController.topViewController
+            if let destvc = targetController as? SavedTableViewController{
+
+                if let saveButton = sender as? UIButton{
+
+                    var indexPath: IndexPath!
+                    if let superview = saveButton.superview {
+  
+                        if let cell = superview.superview as? PostTableViewCell {
+                            indexPath = tableView.indexPath(for: cell)
+                            let post = posts[indexPath.row]
+                            let save = Save(_URL: post.articlesOfClothing, _thumbnail: post.image, _hiddenImage: post.hiddenImage)
+                            destvc.newSave = save
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
     
 }
