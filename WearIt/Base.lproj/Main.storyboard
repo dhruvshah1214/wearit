@@ -216,23 +216,33 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oo6-Z9-aA0">
-                                            <rect key="frame" x="145" y="362" width="30" height="30"/>
+                                            <rect key="frame" x="62" y="312" width="39" height="40"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="B"/>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNA-xz-7cb">
-                                            <rect key="frame" x="270" y="350" width="30" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="C"/>
+                                            <state key="normal" backgroundImage="chatBubble"/>
                                         </button>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4fe-PG-C3g">
                                             <rect key="frame" x="13" y="0.0" width="34" height="32"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLh-KR-rQ3">
-                                            <rect key="frame" x="0.0" y="317" width="30" height="30"/>
+                                            <rect key="frame" x="8" y="317" width="39" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="A"/>
+                                            <state key="normal" backgroundImage="whiteHeart"/>
+                                            <connections>
+                                                <action selector="liked:" destination="BhD-Fz-pwG" eventType="touchUpInside" id="QZh-kv-m1w"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oX3-Rb-xR2">
+                                            <rect key="frame" x="8" y="355" width="55" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNA-xz-7cb">
+                                            <rect key="frame" x="331" y="317" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" backgroundImage="shirt"/>
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -269,6 +279,11 @@
             <point key="canvasLocation" x="3028" y="372.86356821589209"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chatBubble" width="204" height="204"/>
+        <image name="shirt" width="204" height="204"/>
+        <image name="whiteHeart" width="259" height="194"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="FCi-nV-efr"/>
     </inferredMetricsTieBreakers>

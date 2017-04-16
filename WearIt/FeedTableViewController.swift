@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import Firebase
 
 class FeedTableViewController: UITableViewController {
-
+    
+    var ref = FIRDatabase.database().reference()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,6 +28,9 @@ class FeedTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func liked(_ sender: Any) {
+        self.ref.child("Posts").child("1").setValue(["Likes": username])
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
