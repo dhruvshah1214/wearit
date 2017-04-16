@@ -8,14 +8,20 @@
 
 import UIKit
 import Firebase
+import QuartzCore
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         errorMessageLabel.isHidden = true
         emailTextField.layer.cornerRadius = 5.0;
         passwordTextField.layer.cornerRadius = 5
+        signUpButton.layer.cornerRadius = 7
+        loginButton.layer.cornerRadius = 7
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        passwordTextField.isSecureTextEntry = true
     }
     
     @IBOutlet weak var emailTextField: UITextField!
@@ -23,6 +29,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var errorMessageLabel: UILabel!
     
     
+    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
     
     @IBAction func loggedIn(_ sender: Any) {
         if let emailText = emailTextField.text{
@@ -37,6 +45,11 @@ class LoginViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     
