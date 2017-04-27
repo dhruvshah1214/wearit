@@ -216,7 +216,7 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="355"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q2g-Az-QKi" id="PcZ-us-kZx">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="354.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="355"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QRG-ao-COP">
@@ -319,7 +319,7 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="84"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NH6-UB-Ek5" id="6ua-uS-feP">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="83.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JVT-d8-tJB">
@@ -429,43 +429,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lGB-Cc-Ppn">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lGB-Cc-Ppn" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
                                 <rect key="frame" x="0.0" y="64" width="320" height="72"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES" flightNumber="YES" lookupSuggestion="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" cocoaTouchSystemColor="lightTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Write a caption..."/>
+                                </userDefinedRuntimeAttributes>
                             </textView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LNT-FA-mM5">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wJ9-VR-8hh" customClass="CardAnimationView" customModule="WearIt" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="136" width="320" height="432"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="garmentCell" id="GxO-5F-gpZ">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GxO-5F-gpZ" id="RVG-ly-mgS">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="s8u-pF-lDP" id="qNv-xe-eP4"/>
-                                    <outlet property="delegate" destination="s8u-pF-lDP" id="jLf-GA-A4F"/>
-                                </connections>
-                            </tableView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="iLw-gE-q94" firstAttribute="top" secondItem="wJ9-VR-8hh" secondAttribute="bottom" id="4wE-25-xh1"/>
                             <constraint firstItem="lGB-Cc-Ppn" firstAttribute="leading" secondItem="bh4-5J-GEr" secondAttribute="leading" id="BdC-6E-PjU"/>
-                            <constraint firstItem="LNT-FA-mM5" firstAttribute="top" secondItem="lGB-Cc-Ppn" secondAttribute="bottom" id="D9d-YI-848"/>
-                            <constraint firstItem="LNT-FA-mM5" firstAttribute="top" secondItem="lGB-Cc-Ppn" secondAttribute="bottom" id="KCZ-Uh-X33"/>
                             <constraint firstItem="lGB-Cc-Ppn" firstAttribute="top" secondItem="jfC-zS-Rui" secondAttribute="bottom" id="MpD-0q-oUT"/>
-                            <constraint firstItem="iLw-gE-q94" firstAttribute="top" secondItem="LNT-FA-mM5" secondAttribute="bottom" id="Ngr-3S-Nsj"/>
-                            <constraint firstItem="LNT-FA-mM5" firstAttribute="height" secondItem="lGB-Cc-Ppn" secondAttribute="height" multiplier="6" id="Ogd-rY-7xY"/>
-                            <constraint firstItem="LNT-FA-mM5" firstAttribute="leading" secondItem="bh4-5J-GEr" secondAttribute="leading" id="fLb-3r-rBK"/>
+                            <constraint firstAttribute="trailing" secondItem="wJ9-VR-8hh" secondAttribute="trailing" id="PNp-OP-4Oi"/>
+                            <constraint firstItem="wJ9-VR-8hh" firstAttribute="top" secondItem="lGB-Cc-Ppn" secondAttribute="bottom" id="PkF-vg-YBz"/>
+                            <constraint firstItem="wJ9-VR-8hh" firstAttribute="height" secondItem="lGB-Cc-Ppn" secondAttribute="height" multiplier="6" id="QdR-0A-gQZ"/>
+                            <constraint firstItem="wJ9-VR-8hh" firstAttribute="leading" secondItem="bh4-5J-GEr" secondAttribute="leading" id="YIL-1e-OE5"/>
                             <constraint firstAttribute="trailing" secondItem="lGB-Cc-Ppn" secondAttribute="trailing" id="l4z-jA-4yd"/>
-                            <constraint firstAttribute="trailing" secondItem="LNT-FA-mM5" secondAttribute="trailing" id="q4h-s1-gOT"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -477,7 +467,7 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="captionTextView" destination="lGB-Cc-Ppn" id="FqC-o7-DPQ"/>
-                        <outlet property="clothesTableView" destination="LNT-FA-mM5" id="ZYY-I3-IUM"/>
+                        <outlet property="clothesView" destination="wJ9-VR-8hh" id="cEe-jy-qPZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="591-0P-uwb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -612,7 +602,7 @@
         <!--Extract Shirt View Controller-->
         <scene sceneID="SMq-g8-b4X">
             <objects>
-                <viewController id="L5y-Xi-6wT" customClass="ExtractShirtViewController" customModule="WearIt" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="extractShirt" useStoryboardIdentifierAsRestorationIdentifier="YES" id="L5y-Xi-6wT" customClass="ExtractShirtViewController" customModule="WearIt" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Gck-01-L5a"/>
                         <viewControllerLayoutGuide type="bottom" id="ZjR-wK-ooZ"/>

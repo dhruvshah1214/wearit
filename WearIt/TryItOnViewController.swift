@@ -287,9 +287,6 @@ extension UIImage {
         let bitmapByteCount = bitmapBytesPerRow * height
         
         let colorSpace = CGColorSpaceCreateDeviceRGB()
-        if colorSpace == nil {
-            return nil
-        }
         
         let bitmapData = malloc(bitmapByteCount)
         if bitmapData == nil {

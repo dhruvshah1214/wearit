@@ -8,15 +8,18 @@
 
 import UIKit
 
-class PostFinalStepViewController: UIViewController {
+class PostFinalStepViewController: UIViewController  {
     var postImage: UIImage?
     @IBOutlet weak var captionTextView: UITextView!
-    @IBOutlet weak var clothesTableView: UITableView!
+    @IBOutlet weak var clothesView: CardAnimationView!
+    var garments: [Garment] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        clothesView.cardSize = (300,300)
+        clothesView.dataSourceDelegate = self
+        garments.append(Garment())
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -44,4 +47,26 @@ class PostFinalStepViewController: UIViewController {
     }
     */
 
+}
+
+extension PostFinalStepViewController: CardAnimationViewDataSource {
+    func numberOfVisibleCards() -> Int {
+        return 4
+    }
+    
+    func numberOfCards() -> Int {
+        return garments.count
+    }
+    
+    func cardNumber(_ number: Int, reusedView: BaseCardView?) -> BaseCardView {
+        var retView : ImageCardView? = reusedView as? ImageCardView
+        print(" 🃏 Requested card number \(number)")
+        if retView == nil {
+            retView = ImageCardView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+        } else {
+            print(" ✌️ View Cached ✌️ ")
+        }
+        retView!.imageView.image = garments[number].hiddenImage
+        return retView!
+    }
 }

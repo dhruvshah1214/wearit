@@ -36,7 +36,7 @@ class SaveTableViewCell: UITableViewCell {
         if let _save = save{
             Thumbnail.image = _save.thumbnail
             URL.text = _save.URL[0]?.path
-            print(_save.URL[0]?.path)
+            print(_save.URL[0]?.path as Any)
         }
     }
 

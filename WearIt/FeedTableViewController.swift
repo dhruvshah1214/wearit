@@ -10,11 +10,14 @@ import UIKit
 import FirebaseDatabase
 import Firebase
 import FirebaseStorage
+import CoreData
 
 class FeedTableViewController: UITableViewController {
     
     var posts: [Post] = [Post]()
     var ref = FIRDatabase.database().reference()
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.allowsSelection = false
@@ -97,13 +100,14 @@ class FeedTableViewController: UITableViewController {
                                                 print(isrString)
 
                                                 islandRefe.data(withMaxSize: 32 * 1024 * 1024) { data1, error2 in
-                                                    if let er2 = error2 {
+                                                    if error2 != nil {
                                                         // Uh-oh, an error occurred!
                                                     } else {
                                                         
                                                         profile = UIImage(data: data1!)
-                                                        let post = Post(_image: pic!, _user: username!, _numOfLikes: likes!, _articlesOfClothing: [URL(string: clothe!)], _description: description!, _profileImage: profile!, _postID: Int(String(res.key))!, _userID: rest.key, _hiddenImage: #imageLiteral(resourceName: "whiteHeart"))
-                                                        self.posts.append(post)
+                                                        //let post = Post(_image: pic!, _user: username!, _numOfLikes: likes!, _articlesOfClothing: [URL(string: clothe!)], _description: description!, _profileImage: profile!, _postID: Int(String(res.key))!, _userID: rest.key, _hiddenImage: #imageLiteral(resourceName: "whiteHeart"))
+                                                        // let post = NSEntityDescription.insert
+                                                        //self.posts.append(post)
                                                         self.tableView.reloadData()
                                                     }
                                                 }
