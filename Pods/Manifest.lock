@@ -41,8 +41,8 @@ PODS:
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.1)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.1)
   - GTMSessionFetcher/Core (1.1.9)
+  - ImagePicker (2.1.1)
   - KLCPopup (1.0)
-  - TWPhotoPicker (1.0.0)
   - UIView+draggable (1.1.0)
 
 DEPENDENCIES:
@@ -51,8 +51,8 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Storage
   - FirebaseUI/Auth (~> 3.0)
+  - ImagePicker
   - KLCPopup
-  - TWPhotoPicker (~> 1.0.0)
   - UIView+draggable
 
 SPEC CHECKSUMS:
@@ -66,10 +66,10 @@ SPEC CHECKSUMS:
   FirebaseUI: 6e99ff95e369f5858232e4f65bff215458fe8469
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 5c046c76a1f859bc9c187e918f18e4fc7bb57b5e
+  ImagePicker: fe4c699abb56ff03994fa98d8b02e3883ee118be
   KLCPopup: 76c5a19227977f1e53d85236f9ef42257c168d98
-  TWPhotoPicker: 5e9bcd6097e8602e8243d1bdd54a5cf1afbedcf2
   UIView+draggable: ddfbeb6bdfdeba63d9ccf32dc9be2b66cc589717
 
-PODFILE CHECKSUM: ce572f86b2618594fc48fd22fb7760e30ef4e01b
+PODFILE CHECKSUM: 96bd45fe8c2c02a394a5177d4336c1c2d8562c36
 
 COCOAPODS: 1.0.1

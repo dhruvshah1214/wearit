@@ -196,7 +196,7 @@ UINavigationControllerDelegate {
     }
     
     //MARK: - Delegates
-    func imagePickerController(_ picker: UIImagePickerController,
+    private func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [String : AnyObject])
     {        
         if let first = info[UIImagePickerControllerOriginalImage] as? UIImage {

@@ -82,7 +82,7 @@ class FeedTableViewController: UITableViewController {
                                         // Get user value
                                         username = snapshot5.value as? String
                                         print(username!)
-                                        var isrString = "Users/" + username! + "/Posts/" + description! + ".png"
+                                        let isrString = "Users/" + username! + "/Posts/" + description! + ".png"
                                         print(isrString)
                                         let islandRef = storageRef.child(isrString)
                                         

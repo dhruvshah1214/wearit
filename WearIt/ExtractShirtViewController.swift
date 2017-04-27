@@ -77,7 +77,7 @@ UINavigationControllerDelegate {
     }
     
     //MARK: - Delegates
-    func imagePickerController(_ picker: UIImagePickerController,
+    private func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [String : AnyObject])
     {
         let chosenImage = UIImage(data: UIImagePNGRepresentation(info[UIImagePickerControllerOriginalImage] as! UIImage)!)!

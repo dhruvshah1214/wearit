@@ -26,7 +26,7 @@ class SaveTableViewCell: UITableViewCell {
         //UIApplication.shared.openURL((save?.URL[0])!)
         if let _save = save{
             if UIApplication.shared.canOpenURL(_save.URL[0]!){
-                print("URLBLAH: \(URL.text)")
+                print("URLBLAH: \(String(describing: URL.text))")
                 UIApplication.shared.openURL(_save.URL[0]!)
             }
         }
