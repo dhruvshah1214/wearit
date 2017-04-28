@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseStorage
 import QuartzCore
 
 class PostTableViewCell: UITableViewCell {
@@ -24,7 +25,9 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var heart: UIButton!
     
     var ref: FIRDatabaseReference! = FIRDatabase.database().reference()
-    
+    /* var storage: FIRStorage! = FIRStorage.storage()
+    var storageRef: FIRStorageReference! = storage.reference() */
+        
     var post: Post? {
         didSet{
             update()
@@ -32,12 +35,24 @@ class PostTableViewCell: UITableViewCell {
     }
     
     private func update(){
-        if let _post = post{
-            profileImageView.image = _post.profileImage
-            userLabel.text = _post.user
-            contentImage.image = _post.image
-            numberOfLikesLabel.text = String(_post.numOfLikes)
-            articlesOfClothing = _post.articlesOfClothing
+        if let _post = post {
+            do {
+                let imgData = try Data(contentsOf: URL(string: _post.profileImageURL!)!)
+                self.profileImageView.image = UIImage(data: imgData)
+            }
+            catch {
+                
+            }
+            do {
+                let imgData = try Data(contentsOf: URL(string: _post.postImageURL!)!)
+                self.contentImage.image = UIImage(data: imgData)
+            }
+            catch {
+                
+            }
+            userLabel.text = _post.displayName!
+            numberOfLikesLabel.text = String(_post.likes)
+            // articlesOfClothing = _post.garments
             descriptionLabel.text = post?.description
             
             profileImageView.layer.masksToBounds = false
@@ -63,7 +78,7 @@ class PostTableViewCell: UITableViewCell {
         }
         
         
-        self.ref.child("Users").child(self.post!.userID).child("Posts").child(String(self.post!.postID)).child("Likes").setValue(numLikes)
+        self.ref.child("Users").child(self.post!.userID!).child("Posts").child(String(self.post!.postID)).child("Likes").setValue(numLikes)
 
         
     }

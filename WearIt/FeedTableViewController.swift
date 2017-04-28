@@ -172,7 +172,7 @@ class FeedTableViewController: UITableViewController {
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "saveFeed"{
+        /*if segue.identifier == "saveFeed"{
 
             let destinationNavigationController = segue.destination as! UINavigationController
             let targetController = destinationNavigationController.topViewController
@@ -186,13 +186,13 @@ class FeedTableViewController: UITableViewController {
                         if let cell = superview.superview as? PostTableViewCell {
                             indexPath = tableView.indexPath(for: cell)
                             let post = posts[indexPath.row]
-                            let save = Save(_URL: post.articlesOfClothing, _thumbnail: post.image, _hiddenImage: post.hiddenImage)
+                            let save = Save(_URL: [], _thumbnail: post.image, _hiddenImage: post.hiddenImage)
                             destvc.newSave = save
                         }
                     }
                 }
             }
-        }
+        }*/
     }
     
     

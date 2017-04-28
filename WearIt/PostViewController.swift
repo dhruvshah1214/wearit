@@ -36,47 +36,6 @@ class PostViewController: ImagePickerController, UITextFieldDelegate, UITextView
         
         super.viewDidLoad()
         
-        /*
-        // Array to keep track of controllers in page menu
-        var controllerArray : [UIViewController] = []
-        
-        let ip : UIImagePickerController = imagePicker
-        ip.title = "Camera"
-        controllerArray.append(ip)
-        
-        let library: TWPhotoPickerController = TWPhotoPickerController()
-        library.cropBlock =  { (image: UIImage?) in
-            if let pickedImage: UIImage = image {
-                
-            }
-        } 
-        
-        library.title = "Library"
-        controllerArray.append(library)
-        
-        // Customize page menu to your liking (optional) or use default settings by sending nil for 'options' in the init
-        // Example:
-        let parameters: [CAPSPageMenuOption] = [
-            .menuItemSeparatorWidth(4.3), 
-            .useMenuLikeSegmentedControl(true), 
-            .menuItemSeparatorPercentageHeight(0.1)
-        ]
-        
-        // Initialize page menu with controller array, frame, and optional parameters
-        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height), pageMenuOptions: parameters)
-        
-        let horizontalConstraint = NSLayoutConstraint(item: pageMenu!.view, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.bottomMargin, multiplier: 1, constant: 0)
-        let verticalConstraint = NSLayoutConstraint(item: pageMenu!.view, attribute: NSLayoutAttribute.right, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.right, multiplier: 1, constant: 0)
-        let widthConstraint = NSLayoutConstraint(item: pageMenu!.view, attribute: NSLayoutAttribute.left, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.left, multiplier: 1, constant: 0)
-        let heightConstraint = NSLayoutConstraint(item: pageMenu!.view, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.topMargin, multiplier: 1, constant: 0)
-        
-        
-        // Lastly add page menu as subview of base view controller view
-        // or use pageMenu controller in you view hierachy as desired
-        self.view.addSubview(pageMenu!.view)
-        
-        self.view.addConstraints([horizontalConstraint, verticalConstraint, widthConstraint, heightConstraint])
-*/
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -105,6 +64,7 @@ class PostViewController: ImagePickerController, UITextFieldDelegate, UITextView
     func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
         photoEditor = AdobeUXImageEditorViewController(image: images[0])
         photoEditor!.delegate = self
+        self.present(photoEditor! as AdobeUXImageEditorViewController, animated: true, completion:nil)
     }
     
     func cancelButtonDidPress(_ imagePicker: ImagePickerController) {
@@ -115,13 +75,15 @@ class PostViewController: ImagePickerController, UITextFieldDelegate, UITextView
         if let finalImage = image {
             let finalStepVC: PostFinalStepViewController = self.storyboard!.instantiateViewController(withIdentifier: "finalStepVC") as! PostFinalStepViewController
             finalStepVC.postImage = finalImage
-            self.navigationController!.pushViewController(finalStepVC, animated: true)
+            editor.dismiss(animated: true, completion: { 
+                self.show(finalStepVC, sender: self)
+            })
         }
         
     }
     
     func photoEditorCanceled(_ editor: AdobeUXImageEditorViewController) {
-        
+        editor.dismiss(animated: true, completion: nil)
     }
     
     override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {

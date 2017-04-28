@@ -23,7 +23,7 @@ extension Post {
     @NSManaged public var postImageURL: String?
     @NSManaged public var profileImageURL: String?
     @NSManaged public var likes: Int64
-    @NSManaged public var garments: NSOrderedSet?
+    @NSManaged public var garments: NSSet?
 
 }
 

@@ -19,7 +19,8 @@ class PostFinalStepViewController: UIViewController  {
         // Do any additional setup after loading the view.
         clothesView.cardSize = (300,300)
         clothesView.dataSourceDelegate = self
-        garments.append(Garment())
+        self.navigationController?.isNavigationBarHidden = false
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -36,6 +37,9 @@ class PostFinalStepViewController: UIViewController  {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func sharePost(_ sender: UIBarButtonItem) {
+        
+    }
 
     /*
     // MARK: - Navigation
@@ -51,11 +55,11 @@ class PostFinalStepViewController: UIViewController  {
 
 extension PostFinalStepViewController: CardAnimationViewDataSource {
     func numberOfVisibleCards() -> Int {
-        return 4
+        return min(garments.count, 4)
     }
     
     func numberOfCards() -> Int {
-        return garments.count
+        return 0
     }
     
     func cardNumber(_ number: Int, reusedView: BaseCardView?) -> BaseCardView {
@@ -66,7 +70,7 @@ extension PostFinalStepViewController: CardAnimationViewDataSource {
         } else {
             print(" ✌️ View Cached ✌️ ")
         }
-        retView!.imageView.image = garments[number].hiddenImage
+        retView!.imageView.image = UIImage(data: garments[number].image! as Data)
         return retView!
     }
 }

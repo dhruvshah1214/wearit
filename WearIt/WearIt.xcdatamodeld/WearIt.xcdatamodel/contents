@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Garment" representedClassName="Garment" syncable="YES" codeGenerationType="class">
+    <entity name="Garment" representedClassName=".Garment" syncable="YES">
         <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="post" maxCount="1" deletionRule="Nullify" destinationEntity="Post" inverseName="garments" inverseEntity="Post" syncable="YES"/>
     </entity>
-    <entity name="Post" representedClassName="Post" syncable="YES" codeGenerationType="class">
+    <entity name="Post" representedClassName=".Post" syncable="YES">
         <attribute name="caption" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="displayName" attributeType="String" syncable="YES"/>
         <attribute name="likes" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -12,10 +13,10 @@
         <attribute name="postImageURL" attributeType="String" syncable="YES"/>
         <attribute name="profileImageURL" attributeType="String" syncable="YES"/>
         <attribute name="userID" attributeType="String" syncable="YES"/>
-        <relationship name="garments" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Garment" syncable="YES"/>
+        <relationship name="garments" toMany="YES" deletionRule="Nullify" destinationEntity="Garment" inverseName="post" inverseEntity="Garment" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Garment" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="Garment" positionX="-63" positionY="-18" width="128" height="90"/>
         <element name="Post" positionX="-36" positionY="36" width="128" height="165"/>
     </elements>
 </model>

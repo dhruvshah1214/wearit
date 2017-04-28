@@ -43,6 +43,7 @@ PODS:
   - GTMSessionFetcher/Core (1.1.9)
   - ImagePicker (2.1.1)
   - KLCPopup (1.0)
+  - UITextView+Placeholder (1.2.0)
   - UIView+draggable (1.1.0)
 
 DEPENDENCIES:
@@ -53,6 +54,7 @@ DEPENDENCIES:
   - FirebaseUI/Auth (~> 3.0)
   - ImagePicker
   - KLCPopup
+  - UITextView+Placeholder (~> 1.2)
   - UIView+draggable
 
 SPEC CHECKSUMS:
@@ -68,8 +70,9 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 5c046c76a1f859bc9c187e918f18e4fc7bb57b5e
   ImagePicker: fe4c699abb56ff03994fa98d8b02e3883ee118be
   KLCPopup: 76c5a19227977f1e53d85236f9ef42257c168d98
+  UITextView+Placeholder: 77680995fcdd07c3f52ec92fe1150874a2ac89ff
   UIView+draggable: ddfbeb6bdfdeba63d9ccf32dc9be2b66cc589717
 
-PODFILE CHECKSUM: 5260c6ebd3c919fa120b18aceea2eb349c7044be
+PODFILE CHECKSUM: 789a2a652ff1660045c4f90e543636f0b7042ec1
 
 COCOAPODS: 1.0.1

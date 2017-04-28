@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import Firebase
+import AdobeCreativeSDKCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FIRApp.configure()
+        AdobeUXAuthManager.shared().setAuthenticationParametersWithClientID("cc77e8f6b764447a9fd102c16f24615d", withClientSecret: "c32af53e-0c6e-46a2-b5fd-09fa37bcacd1")
         // Override point for customization after application launch.
         return true
     }
@@ -56,7 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
          */
-        let container = NSPersistentContainer(name: "HitList")
+        let container = NSPersistentContainer(name: "WearIt")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.

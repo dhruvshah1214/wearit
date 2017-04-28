@@ -39,3 +39,7 @@ open class ImageCardView: BaseCardView {
         imageView.isHidden = false
     }
 }
+
+enum panScrollDirection{
+    case up, down
+}

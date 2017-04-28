@@ -14,8 +14,8 @@ target 'WearIt' do
   pod 'KLCPopup'
   pod 'UIView+draggable'
   pod 'ImagePicker'
-  #pod 'KMPlaceholderTextView'
-
+  pod 'UITextView+Placeholder', '~> 1.2'
+  
   target 'WearItTests' do
     inherit! :search_paths
     # Pods for testing
